@@ -1,2 +1,6 @@
-from turtle import Turtle, Screen
+from pong_screen import PongScreen
 
+scr = PongScreen()
+
+
+scr.screen.exitonclick()
