@@ -15,6 +15,7 @@ while not game_over:
     # Right paddle motion
     scr.screen.onkey(paddles.right_up, "Up")
     scr.screen.onkey(paddles.right_down, "Down")
+
     # Left paddle motion
     scr.screen.onkey(paddles.left_up, "w")
     scr.screen.onkey(paddles.left_down, "s")
