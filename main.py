@@ -1,9 +1,10 @@
 from turtle import Screen, Turtle
-from paddles import Paddles
+from paddle import Paddle
 from pong_screen import PongScreen
 
 scr = PongScreen()
-paddles = Paddles()
+right_paddle = Paddle((450, 0))
+left_paddle = Paddle((-450, 0))
 scr.screen.update()
 
 
@@ -12,13 +13,13 @@ scr.screen.listen()
 game_over = False
 
 while not game_over:
-    # Right paddle motion
-    scr.screen.onkey(paddles.right_up, "Up")
-    scr.screen.onkey(paddles.right_down, "Down")
-
     # Left paddle motion
-    scr.screen.onkey(paddles.left_up, "w")
-    scr.screen.onkey(paddles.left_down, "s")
+    scr.screen.onkey(left_paddle.up, "w")
+    scr.screen.onkey(left_paddle.down, "s")
+    # Right paddle motion
+
+    scr.screen.onkey(right_paddle.up, "Up")
+    scr.screen.onkey(right_paddle.down, "Down")
     scr.screen.update()
 
 
