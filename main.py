@@ -17,13 +17,8 @@ while not game_over:
     # Move ball
     ball.move()
 
-    # if ball touches ceiling or floor
-    if ball.ycor() > 280 or ball.ycor() < -280:
-        ball.y_motion *= -1
-
-    # if ball touches paddles
-    if (ball.distance(right_paddle) < 50 and ball.xcor() >= 430) or (ball.distance(left_paddle) < 50 and ball.xcor() <= -430):
-        ball.x_motion *= -1
+    # if ball touches ceiling, floor or paddles, it will bounce
+    ball.bounce(right_paddle, left_paddle)
 
     # Left paddle motion
     scr.screen.onkey(left_paddle.up, "w")
