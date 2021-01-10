@@ -1,5 +1,3 @@
-from turtle import Screen, Turtle
-import time
 from ball import Ball
 from paddle import Paddle
 from pong_screen import PongScreen
@@ -24,7 +22,7 @@ while not game_over:
         ball.y_motion *= -1
 
     # if ball touches paddles
-    if ball.distance(right_paddle) < 35 or ball.distance(left_paddle) < 35:
+    if (ball.distance(right_paddle) < 50 and ball.xcor() >= 430) or (ball.distance(left_paddle) < 50 and ball.xcor() <= -430):
         ball.x_motion *= -1
 
     # Left paddle motion
@@ -34,6 +32,21 @@ while not game_over:
     # Right paddle motion
     scr.screen.onkey(right_paddle.up, "Up")
     scr.screen.onkey(right_paddle.down, "Down")
+
+    # Logic for moving the paddles if the user wants to ply against a computer
+    if ball.xcor() < -350:
+        if ball.ycor() > left_paddle.ycor():
+            left_paddle.up()
+        elif ball.ycor() < left_paddle.ycor():
+            left_paddle.down()
+
+    if ball.xcor() > 350:
+        if ball.ycor() > right_paddle.ycor():
+            right_paddle.up()
+        elif ball.ycor() < right_paddle.ycor():
+            right_paddle.down()
+
+
 
     scr.screen.update()
 
