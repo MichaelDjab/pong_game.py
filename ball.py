@@ -1,5 +1,7 @@
 from turtle import Turtle
 import random
+
+
 class Ball(Turtle):
     
     def __init__(self):
@@ -7,8 +9,8 @@ class Ball(Turtle):
         self.color("white")
         self.shape("circle")
         self.penup()
-        self.x_motion = random.randint(1, 15)
-        self.y_motion = random.randint(1, 15)
+        self.x_motion = random.randint(1, 10)
+        self.y_motion = random.randint(1, 10)
 
     def move(self):
         x_cor = self.xcor() + self.x_motion
