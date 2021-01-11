@@ -20,10 +20,14 @@ class Ball(Turtle):
     def bounce(self, right_paddle, left_paddle):
         # if ball touches ceiling or floor
         if self.ycor() > 280 or self.ycor() < -280:
-            self.y_motion *= -1
+            self.y_motion *= -1.01
+            self.x_motion *= 1.01
 
         # if ball touches paddles
         if self.distance(right_paddle) < 50 and self.xcor() >= 430:
-            self.x_motion *= -1
+            self.x_motion *= -1.05
+            self.y_motion *= 1.05
         if self.distance(left_paddle) < 50 and self.xcor() <= -430:
-            self.x_motion *= -1
+            self.x_motion *= -1.05
+            self.x_motion *= 1.05
+

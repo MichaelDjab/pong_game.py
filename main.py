@@ -12,12 +12,14 @@ user_input = scr.screen.textinput(prompt="Enter the number corresponding to one 
 right_paddle = Paddle((450, 0))
 if user_input == "1":
     right_paddle.color("#f88f01")
+
 left_paddle = Paddle((-450, 0))
 ball = Ball()
 left_score = Score((100, 250))
 right_score = Score((-100, 250))
 scr.screen.update()
 scr.screen.listen()
+
 game_over = False
 while not game_over:
     # Move ball
@@ -25,8 +27,6 @@ while not game_over:
 
     # if ball touches ceiling, floor or paddles, it will bounce
     ball.bounce(right_paddle, left_paddle)
-    ball.x_motion *= 1.001
-    ball.y_motion *= 1.001
 
     # if ball gets away from the paddles
     if ball.xcor() > 530:

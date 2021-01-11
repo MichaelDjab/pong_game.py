@@ -14,7 +14,6 @@ class Score(Turtle):
         self.goto(pos)
         self.write_score()
 
-
     def write_score(self):
         self.clear()
         self.write(f"Score: {self.score}", False, align=ALIGNMENT, font=FONT)
