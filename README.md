@@ -9,11 +9,15 @@ When the computer plays against one player, the player's paddle is bright orange
 Watch out for the ball, every time it hits a paddle or a wall it goes faster!
 Enjoy the game! :grin:
 
-<img src="pong.png" 
+<img src="pong1.png" 
 style="float: left; 
 margin-right: 15px;" />​
 
 
-<img src="pong2.png" 
+<img src="pong22.png" 
+style="float: left; 
+margin-right: 15px;" />​
+
+<img src="pong33.png" 
 style="float: left; 
 margin-right: 15px;" />​
