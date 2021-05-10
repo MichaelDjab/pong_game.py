@@ -2,7 +2,7 @@
 
 This project is a simple implementation of the Pong game.
 
-The program starts by asking the user how whether they want zero, one or two players, where zero players is simply the game playing against itself. 
+The program starts by asking the user whether they want zero, one or two players, where zero players is simply the game playing against itself. 
 The goal of the game is to hit the white bouncing ball with the paddles using the arrow keys for the first player along with the "w, s" keys for two players. 
 When the computer plkays against one player, the player's paddle is bright orange. 
 
